@@ -3,8 +3,9 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Enquiries from "./pages/Enquiries";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+
 import {Toaster} from "react-hot-toast"
+import Background from "./components/Background";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/enquiries" element={<Enquiries />} />
       </Routes>
-      <Footer />
+     
       <Toaster/>
+      <Background/>
     </BrowserRouter>
   );
 }

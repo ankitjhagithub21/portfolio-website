@@ -1,11 +1,13 @@
 import Background from "../components/Background"
 
+
 const Home = () => {
   return (
     <div
       className="hero min-h-screen"
       
     >
+     
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
         <section className="text-center p-10">

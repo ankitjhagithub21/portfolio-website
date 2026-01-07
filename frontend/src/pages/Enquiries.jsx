@@ -1,36 +1,59 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import { BiTrash } from "react-icons/bi";
 
 const Enquiries = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    api.get("/enquiries").then(res => setData(res.data));
+    api.get("/enquiries").then((res) => setData(res.data));
   }, []);
 
+  const handleDelete = () => {
+
+  }
   return (
-    <table className="w-full border">
-      <thead>
-        <tr>
-          <th>Client</th>
-          <th>Project</th>
-          <th>Budget</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map(item => (
-          <tr key={item._id}>
-            <td>{item.clientName}</td>
-            <td>{item.projectName}</td>
-            <td>{item.budget}</td>
-            <td>
-              <button onClick={() => api.delete(`/enquiries/${item._id}`)}>Delete</button>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="min-h-screen w-full px-5 pt-14 overflow-y-scroll">
+     
+      <div className="overflow-x-auto">
+        <table className="table table-xs">
+          <thead>
+            <tr>
+              <th>Client Name</th>
+              <th>Project Name</th>
+              <th>Phone Number</th>
+              <th>Budget Range</th>
+              <th>Description</th>
+              <th>Links</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item) => {
+              return (
+                <tr key={item._id}>
+                  
+                  <td>{item.clientName}</td>
+                  <td>{item.projectName}</td>
+                  <td>{item.phone}</td>
+                  <td>{item.budget}</td>
+                  <td>{item.description}</td>
+                  
+                  <td>
+                    <a href={item.links} target="_blank">{item.links}</a>
+                  </td>
+                  <td>
+                    <button className="btn" >
+                      <BiTrash/>
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 };
 

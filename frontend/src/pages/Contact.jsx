@@ -12,7 +12,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import Background from "../components/Background"
+import Background from "../components/Background";
 
 
 const Contact = () => {
@@ -53,26 +53,7 @@ const Contact = () => {
     }
   };
 
-  const contactInfo = [
-    {
-      icon: <FaEnvelope className="text-xl" />,
-      title: "Email",
-      value: "hello@yourname.com",
-      color: "text-primary",
-    },
-    {
-      icon: <FaPhone className="text-xl" />,
-      title: "Phone",
-      value: "+1 (555) 123-4567",
-      color: "text-secondary",
-    },
-    {
-      icon: <FaMapMarkerAlt className="text-xl" />,
-      title: "Location",
-      value: "San Francisco, CA",
-      color: "text-accent",
-    },
-  ];
+  
 
   return (
     <div className="min-h-screen  bg-gradient-to-br from-base-200 via-base-100 to-base-200 py-12 px-4 sm:px-6 lg:px-8">
@@ -84,23 +65,20 @@ const Contact = () => {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10 mt-2">
-     
-
         {/* Contact Form */}
         <div className="lg:col-span-2">
-          
           <div className="card bg-base-100 shadow-2xl">
-               {/* Header Section */}
-        <div className="text-center mt-5">
-         
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4">
-            Get In Touch
-          </h1>
-          <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
-            Have a project in mind? Let's create something amazing together.
-            Fill out the form below and I'll get back to you within 24 hours.
-          </p>
-        </div>
+            {/* Header Section */}
+            <div className="text-center mt-5">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4">
+                Get In Touch
+              </h1>
+              <p className="text-base-content/70 text-lg max-w-2xl mx-auto">
+                Have a project in mind? Let's create something amazing together.
+                Fill out the form below and I'll get back to you within 24
+                hours.
+              </p>
+            </div>
             <div className="card-body p-6 sm:p-8 lg:p-10">
               <form onSubmit={submitHandler} className="space-y-5">
                 {/* Row 1: Client Name & Project Name */}
@@ -253,7 +231,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    <Background/>
+      <Background />
     </div>
   );
 };

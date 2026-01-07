@@ -8,6 +8,7 @@ import { useAuth } from "./context/AdminContext";
 import Login from "./components/Login";
 
 
+
 function App() {
 
   const {admin} = useAuth();
@@ -15,7 +16,7 @@ function App() {
   
   return (
     <BrowserRouter>
-      <Header />
+    <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="navbar  fixed top-0 z-50 w-full">
+    <div className="navbar mx-auto fixed top-0 z-50 w-full">
       <div className="flex-1">
         <Link to={"/"} className="btn btn-ghost text-xl">
           Portfolio

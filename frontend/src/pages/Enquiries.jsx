@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
-import { BiTrash } from "react-icons/bi";
+import { BiEdit, BiTrash } from "react-icons/bi";
 
 const Enquiries = () => {
   const [data, setData] = useState([]);
@@ -9,12 +9,17 @@ const Enquiries = () => {
     api.get("/enquiries").then((res) => setData(res.data));
   }, []);
 
-  const handleDelete = () => {
-
-  }
+  const handleDelete = async (id) => {
+    try {
+      await api.delete(`/enquiries/${id}`);
+      setData((prev) => prev.filter((item) => item._id !== id));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
   return (
     <div className="min-h-screen w-full px-5 pt-14 overflow-y-scroll">
-     
       <div className="overflow-x-auto">
         <table className="table table-xs">
           <thead>
@@ -32,19 +37,26 @@ const Enquiries = () => {
             {data.map((item) => {
               return (
                 <tr key={item._id}>
-                  
                   <td>{item.clientName}</td>
                   <td>{item.projectName}</td>
                   <td>{item.phone}</td>
                   <td>{item.budget}</td>
-                  <td>{item.description}</td>
-                  
+                  <td className="truncate">{item.description}</td>
+
                   <td>
-                    <a href={item.links} target="_blank">{item.links}</a>
+                    <a href={item.links} target="_blank">
+                      {item.links}
+                    </a>
                   </td>
-                  <td>
-                    <button className="btn" >
-                      <BiTrash/>
+                  <td className="flex gap-2 items-center">
+                    <button
+                      className="btn"
+                      onClick={() => handleDelete(item._id)}
+                    >
+                      <BiTrash />
+                    </button>
+                    <button className="btn btn-success">
+                      <BiEdit />
                     </button>
                   </td>
                 </tr>

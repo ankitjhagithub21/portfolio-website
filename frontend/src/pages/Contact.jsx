@@ -84,8 +84,14 @@ const Contact = () => {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10 mt-2">
-        {/* Header Section */}
-        <div className="text-center mb-12">
+     
+
+        {/* Contact Form */}
+        <div className="lg:col-span-2">
+          
+          <div className="card bg-base-100 shadow-2xl">
+               {/* Header Section */}
+        <div className="text-center mt-5">
          
           <h1 className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4">
             Get In Touch
@@ -95,10 +101,6 @@ const Contact = () => {
             Fill out the form below and I'll get back to you within 24 hours.
           </p>
         </div>
-
-        {/* Contact Form */}
-        <div className="lg:col-span-2">
-          <div className="card bg-base-100 shadow-2xl">
             <div className="card-body p-6 sm:p-8 lg:p-10">
               <form onSubmit={submitHandler} className="space-y-5">
                 {/* Row 1: Client Name & Project Name */}

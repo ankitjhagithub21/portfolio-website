@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import {Toaster} from "react-hot-toast"
 import { useAuth } from "./context/AdminContext";
 import Login from "./components/Login";
+import NotFound from "./components/NotFound";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/enquiries" element={admin ? <Enquiries /> : <Navigate to={"/login"}/>} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
       <Toaster/>
       

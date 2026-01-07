@@ -1,4 +1,4 @@
-
+import Background from "../components/Background"
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
           </a>
         </section>
       </div>
-      
+      <Background/>
     </div>
   );
 };

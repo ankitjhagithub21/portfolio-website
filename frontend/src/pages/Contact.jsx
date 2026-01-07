@@ -11,8 +11,8 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { HiSparkles } from "react-icons/hi";
 import { BiMessageSquareDetail } from "react-icons/bi";
+import Background from "../components/Background"
 
 
 const Contact = () => {
@@ -251,7 +251,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    
+    <Background/>
     </div>
   );
 };

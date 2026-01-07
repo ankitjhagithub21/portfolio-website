@@ -10,8 +10,9 @@ export const AdminProvider = ({ children }) => {
     const getAdmin = async () => {
       await api
         .get("/admin")
-        .then((data) => {
-          setAdmin(data);
+        .then((resData) => {
+          
+          setAdmin(resData.data);
         })
         .catch(() => {
           setAdmin(null);

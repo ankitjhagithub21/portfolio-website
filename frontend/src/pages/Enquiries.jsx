@@ -25,7 +25,7 @@ const Enquiries = () => {
   };
 
   return (
-    <div className="min-h-screen w-full px-5 pt-14 overflow-y-scroll">
+    <div className="min-h-screen w-full px-5 py-20 overflow-y-scroll">
       <div className="overflow-x-auto">
         <table className="table table-xs">
           <thead>

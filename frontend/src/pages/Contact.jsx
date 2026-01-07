@@ -56,7 +56,7 @@ const Contact = () => {
   
 
   return (
-    <div className="min-h-screen  bg-gradient-to-br from-base-200 via-base-100 to-base-200 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen  bg-gradient-to-br from-base-200 via-base-100 to-base-200 py-20 px-4 sm:px-6 lg:px-8">
       {/* Background Decorations */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>

@@ -5,6 +5,16 @@ The project allows visitors to submit enquiries via a contact form, while admins
 
 ---
 
+## 🔐 Admin Login (Demo Credentials)
+
+Use the following credentials to access the admin panel:
+
+- **Email:** test@gmail.com  
+- **Password:** 123456
+
+> ⚠️ These credentials are for demo/testing purposes only.
+
+
 ## 📁 Project Structure
 
 ```

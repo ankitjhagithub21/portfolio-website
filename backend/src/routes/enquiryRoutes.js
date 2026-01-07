@@ -7,10 +7,11 @@ const {
   updateEnquiry,
   deleteEnquiry,
 } = require("../controllers/enquiryController");
+const isAuth = require("../middlewares/isAuth");
 
 router.post("/", createEnquiry);
-router.get("/", getEnquiries);
-router.put("/:id", updateEnquiry);
-router.delete("/:id", deleteEnquiry);
+router.get("/", isAuth , getEnquiries);
+router.put("/:id",isAuth ,updateEnquiry);
+router.delete("/:id", isAuth ,deleteEnquiry);
 
 module.exports = router;
